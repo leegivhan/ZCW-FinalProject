@@ -16,10 +16,11 @@
 ### Gathering Data From:
 
 * Twitter Streaming API
+* News API
 
 ### Cleaning data, Analyzing data:
 
-* Pandas
+* PySpark
 
 ### Sentiment Analysis Tool:
 
