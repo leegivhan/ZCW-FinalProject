@@ -1,2 +1,2 @@
-# Sentiment Analysis for Conversation Around Covid-19 Vaccine on Twitter
+# Sentiment Analysis for Conversation Around Covid-19 Vaccine using Twitter API
 
