@@ -14,12 +14,15 @@
 * MySQL
 
 ### Gathering Data From:
+
 * Twitter Streaming API
 
 ### Cleaning data, Analyzing data:
+
 * Pandas
 
 ### Sentiment Analysis Tool:
+
 * nltk, Tensorflow
 
 ....
