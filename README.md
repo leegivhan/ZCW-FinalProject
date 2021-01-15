@@ -35,6 +35,7 @@ We created various visualizations of the data using Matplotlib and Tableau, comp
 ### Frameworks Used  
 
 - Airflow
+- AWS light MySql
 - PANDAS 
 - Matplotlib
 - Tableau
