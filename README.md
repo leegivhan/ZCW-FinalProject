@@ -21,7 +21,9 @@ This last Word Cloud has words found in **nuetral** tweets:
 
 Using Matplotlib, we made a stacked bar graph comparing the different regions in the United States:
 
-<img src = "Images/stackedbar-matplotlib.png">
+<p align="center">
+<img width="400" src = "Images/stackedbar-matplotlib.png">
+</p>
 
 And the whole process was automated using an Apache Airflow DAG:
 
