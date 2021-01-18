@@ -4,9 +4,14 @@
 
 For our final project at Zip Code Wilmington, we chose to create a sentiment anlayis on the conversation on Twitter surrounding the COVID-19 vaccine in the United States. We produced streams of all the tweets using the Twitter API and Apache Airflow and put the data into an AWS SQL database. We then cleaned the data with Spark and returned it to the database.
 
-After acquiring this data, we used NLTK machine learning models to analyze the sentiment of the tweets. We then separated tweets into four different tables, based on what region of the United States they came from and created various visualizations of the data using Wordcloud, Matplotlib, and Tableau (see below).
+After acquiring this data, we used NLTK machine learning models to analyze the sentiment of the tweets. We then separated tweets into four different tables, based on what region of the United States they came from and created various visualizations of the data using Wordcloud, Matplotlib, and Tableau.
+
+Here is a flowchart showing how all of the technologies worked together:
+
+<img src = "Images/Twitter-Sentiment-Flow-Chart.jpeg">
 
 ---  
+
 In the sentiment analysis, tweets were split into three categories: positive, negative and neutral. Using Word Cloud, we generated images of the key words found in **positive** tweets. The larger the word, the more common it was:
 
 <img src = "Images/positive-words.png">
@@ -45,10 +50,6 @@ Lastly, we made [interactive data visualizations using Tableau].(https://public.
 - NLTK
 - Papermill
 - PySpark
-
-Here is a flowchart showing how all of the technologies worked together:
-
-<img src = "Images/Twitter-Sentiment-Flow-Chart.jpeg">
 
 ## Meet the Team
 ---
