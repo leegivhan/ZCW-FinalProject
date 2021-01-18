@@ -29,7 +29,7 @@ And the whole process was automated using an Apache Airflow DAG:
 
 <img src = "Images/dag.png">
 
-Lastly, we made [interactive data visualizations using Tableau](https://public.tableau.com/profile/lee.givhan#!/vizhome/USASentimentViz1/Dashboard1?publish=yes)
+Lastly, we made [interactive data visualizations using Tableau].(https://public.tableau.com/profile/lee.givhan#!/vizhome/USASentimentViz1/Dashboard1?publish=yes)
 
 ### API Used  
 
