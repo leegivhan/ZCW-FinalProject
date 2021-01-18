@@ -1,5 +1,6 @@
 # Sentiment Analysis of Conversation Surrounding Covid-19 Vaccine 
 
+
 ***
 
 For our final project at Zip Code Wilmington, we chose to create a sentiment anlayis on the Twitter conversation surrounding the COVID-19 vaccine in the United States. We produced streams of all the tweets using the Twitter API and put the data into an AWS SQL database. We then cleaned the data with Spark and returned it to the database.
