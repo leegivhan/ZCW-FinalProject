@@ -4,39 +4,46 @@ import os
 import papermill as pm
 import pandas as pd
 from datetime import datetime,timedelta
+from airflow.models import Variable
 #import papermill as pm
 #from airflow.operators.papermill_operator import PapermillOperator
 from airflow.operators.python_operator import PythonOperator
 
-# from airflow.executors import
-# def read_files():
-#     df = pd.read_csv("/Users/suma/Tennis_project/Stats.csv")
 
+var_list = Variable.get("sentiment_analysis_variables", deserialize_json=True)
+Inserting_TwitterData_AWSMysql = var_list["Inserting_TwitterData_AWSMysql"]
+Output_Inserting_TwitterData_AWSMysql = var_list["Output_Inserting_TwitterData_AWSMysql"]
+Cleaning_Storing_TwitterData = var_list["Output_Cleaning_Storing_TwitterData"]
+Output_Cleaning_Storing_TwitterData = var_list["Output_Cleaning_Storing_TwitterData"]
+Twitter_SentimentAnalysis = var_list["Twitter_SentimentAnalysis"]
+Output_Twitter_SentimentAnalysis = var_list["Output_Twitter_SentimentAnalysis"]
+Sentiment_Analysis_visualization = var_list["Sentiment_Analysis_visualization"]
+Output_Sentiment_Analysis_visualization = var_list["Output_Sentiment_Analysis_visualization"]
 
 def call_jupyter_twitterdata_mysql():
     pm.execute_notebook(
-        '/Users/suma/ZCW-FinalProject/Gathering_Cleaning_TwitterData/Inserting_TwitterData_AWSMysql.ipynb',
-        '/Users/suma/ZCW-FinalProject/Output_Files/Output_Inserting_TwitterData_AWSMysql.ipynb',
+        Inserting_TwitterData_AWSMysql,
+       Output_Inserting_TwitterData_AWSMysql,
         parameters=dict(TEST=True,
                         QUICK_RUN=True, ), )
 
 def call_jupyter_cleaning_storing():
     pm.execute_notebook(
-        '/Users/suma/ZCW-FinalProject/Gathering_Cleaning_TwitterData/Cleaning_Storing_TwitterData.ipynb',
-        '/Users/suma/ZCW-FinalProject/Output_Files/Output_Cleaning_Storing_TwitterData.ipynb',
+        Cleaning_Storing_TwitterData,
+        Output_Cleaning_Storing_TwitterData,
         parameters=dict(TEST=True,
                         QUICK_RUN=True, ), )
 
 def call_jupyter_twitter_sentiment_analysis():
     pm.execute_notebook(
-        '/Users/suma/ZCW-FinalProject/Sentiment_Analysis/Twitter_SentimentAnalysis.ipynb',
-        '/Users/suma/ZCW-FinalProject/Output_Files/Output_Twitter_SentimentAnalysis.ipynb',
+        Twitter_SentimentAnalysis,
+        Output_Twitter_SentimentAnalysis,
         parameters=dict( TEST=True,
                          QUICK_RUN=True,), )
 def call_jupyter_twitter_visualization():
     pm.execute_notebook(
-        '/Users/suma/ZCW-FinalProject/Sentiment_Analysis/Sentiment_Analysis_visualization.ipynb',
-        '/Users/suma/ZCW-FinalProject/Output_Files/Output_Sentiment_Analysis_visualization.ipynb',
+        Sentiment_Analysis_visualization,
+        Output_Sentiment_Analysis_visualization,
         parameters=dict( TEST=True,
                          QUICK_RUN=True,), )
 
@@ -48,7 +55,7 @@ default_args = {
     # 'retry_delay': timedelta(minutes=5),
 
 }
-# dag = DAG(dag_id='DAG_2',default_args=default_args,catchup=False,schedule_interval='@once')
+
 dag = DAG(
     dag_id='Sentiment_Analysis_Twitter_Data',
     default_args=default_args,
@@ -80,13 +87,4 @@ t4 = PythonOperator(
      python_callable=call_jupyter_twitter_visualization,
      dag=dag,
 )
-#
-# t3b = PythonOperator(
-#      task_id='read_and_clean_news_data',
-#      provide_context=False,
-#      python_callable=call_jupyter_news,
-#      dag=dag,
-# )
-
 t1 >> t2 >> t3 >> t4
-# t1 >> t3b
