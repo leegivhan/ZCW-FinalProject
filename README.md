@@ -3,7 +3,7 @@
 
 ***
 
-For our final project at Zip Code Wilmington, we chose to create a sentiment anlayis on the Twitter conversation surrounding the COVID-19 vaccine in the United States. We produced streams of all the tweets using the Twitter API and put the data into an AWS SQL database. We then cleaned the data with Spark and returned it to the database.
+For our final project at Zip Code Wilmington, we chose to create a sentiment analyis on the Twitter conversation surrounding the COVID-19 vaccine in the United States. We produced streams of all the tweets using the Twitter API and put the data into an AWS SQL database. We then cleaned the data with Spark and returned it to the database.
 
 After acquiring this data, we used NLTK machine learning models to analyze the sentiment of the tweets. We then separated the tweets into four different tables, based on what region of the United States they came from and created various visualizations of the data using Wordcloud and [Matplotlib](https://github.com/Anujangalapalli/ZCW-FinalProject/blob/main/Images/stackedbar-matplotlib.png). The whole process was automated using an [Apache Airflow DAG](https://github.com/Anujangalapalli/ZCW-FinalProject/blob/main/Images/dag.png).
 
