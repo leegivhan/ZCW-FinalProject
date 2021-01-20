@@ -9,7 +9,7 @@ After acquiring this data, we used NLTK machine learning models to analyze the s
 
 Lastly, we made an [interactive data visualizations using Tableau](https://public.tableau.com/profile/lee.givhan#!/vizhome/USASentimentViz1/Dashboard1?publish=yes) where you can view the sentiment analysis for the USA and isolate each region.
 
-Below are the basic steps of our program, followed by a flowchart showing how all of the technologies worked together. View our PowerPoint presentation by [clicking here](https://docs.google.com/presentation/d/18ZFoBC8xl2lBe5G36CmYlEx096O1pVa48K9YEywZ-sU/edit#slide=id.gae719dbeab_0_6).
+Below are the basic steps of our program, followed by a flowchart showing how all of the technologies worked together. View our PowerPoint presentation by [clicking here](https://docs.google.com/presentation/d/18ZFoBC8xl2lBe5G36CmYlEx096O1pVa48K9YEywZ-sU/edit?usp=sharing).
 
 <p align="center">
 <img src = "Images/StepSummary.png">
