@@ -9,8 +9,11 @@ After acquiring this data, we used NLTK machine learning models to analyze the s
 
 Lastly, we made an [interactive data visualizations using Tableau](https://public.tableau.com/profile/lee.givhan#!/vizhome/USASentimentViz1/Dashboard1?publish=yes) where you can view the sentiment analysis for the USA and isolate each region.
 
-Here is a flowchart showing how all of the technologies worked together:
+Below are the basic steps of our program, followed by a flowchart showing how all of the technologies worked together:
 
+<p align="center">
+<img src = "Images/StepSummary.png">
+</p>
 <p align="center">
 <img width="700" src = "Images/Twitter-Sentiment-Flow-Chart.jpeg">
 </p>
