@@ -37,7 +37,8 @@ Here are key words found in **negative** tweets:
 ### Frameworks Used  
 
 - Airflow
-- AWS lightsail MySql
+- Amazon Lightsail 
+- MySQL
 - PANDAS 
 - Matplotlib
 - Tableau
